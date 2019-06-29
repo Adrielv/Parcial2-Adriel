@@ -56,10 +56,15 @@ namespace Parcial2_Adriel.UI
             bool paso = true;
             MyErrorProvider.Clear();
 
-            if (NombrestextBox.Text == string.Empty)
+            if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
                 MyErrorProvider.SetError(NombrestextBox, "El campo Nombres no puede estar vacio");
                 NombrestextBox.Focus();
+                paso = false;
+            }
+            if (FechaIngresodateTimePicker.Value > DateTime.Now)
+            {
+                MyErrorProvider.SetError(FechaIngresodateTimePicker, "No se puede registrar esta fecha.");
                 paso = false;
             }
 

@@ -54,14 +54,14 @@ namespace Parcial2_Adriel.UI
 
             if (Descripcion.Text == string.Empty)
             {
-                MyErrorProvider.SetError(Descripcion, "El campo Descripcion no puede estar vacio");
+                MyErrorProvider.SetError(DescripciontextBox, "El campo Descripcion no puede estar vacio");
                 Descripcion.Focus();
                 paso = false;
             }
 
-            if (CreditosnumericUpDown.Value < 1)
+            if (CreditosnumericUpDown.Value == 0)
             {
-                MyErrorProvider.SetError(CreditosnumericUpDown, "El campo Usuario no puede ser 0");
+                MyErrorProvider.SetError(CreditosnumericUpDown, "El campo Creditos no puede ser 0");
                 CreditosnumericUpDown.Focus();
                 paso = false;
             }

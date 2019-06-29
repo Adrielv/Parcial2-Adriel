@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 60);
+            this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 17);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 101);
+            this.label2.Location = new System.Drawing.Point(12, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 150);
+            this.label3.Location = new System.Drawing.Point(12, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 2;
@@ -77,7 +77,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 197);
+            this.label4.Location = new System.Drawing.Point(12, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 3;
@@ -85,62 +85,71 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 259);
+            this.Nuevobutton.Image = global::Parcial2_Adriel.Properties.Resources.add;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 212);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(103, 52);
             this.Nuevobutton.TabIndex = 4;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(142, 258);
+            this.Guardarbutton.Image = global::Parcial2_Adriel.Properties.Resources.save_as;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(142, 212);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(103, 53);
             this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(266, 258);
+            this.Eliminarbutton.Image = global::Parcial2_Adriel.Properties.Resources.delete;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(262, 212);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(103, 53);
             this.Eliminarbutton.TabIndex = 6;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(142, 60);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(129, 24);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
-            this.IdnumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.IdnumericUpDown.Size = new System.Drawing.Size(58, 22);
             this.IdnumericUpDown.TabIndex = 7;
             // 
             // BalancenumericUpDown
             // 
-            this.BalancenumericUpDown.Location = new System.Drawing.Point(142, 192);
+            this.BalancenumericUpDown.Location = new System.Drawing.Point(125, 150);
             this.BalancenumericUpDown.Name = "BalancenumericUpDown";
-            this.BalancenumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.BalancenumericUpDown.Size = new System.Drawing.Size(185, 22);
             this.BalancenumericUpDown.TabIndex = 8;
             // 
             // NombrestextBox
             // 
-            this.NombrestextBox.Location = new System.Drawing.Point(142, 145);
+            this.NombrestextBox.Location = new System.Drawing.Point(125, 111);
             this.NombrestextBox.Name = "NombrestextBox";
-            this.NombrestextBox.Size = new System.Drawing.Size(120, 22);
+            this.NombrestextBox.Size = new System.Drawing.Size(185, 22);
             this.NombrestextBox.TabIndex = 9;
             // 
             // FechaIngresodateTimePicker
             // 
             this.FechaIngresodateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaIngresodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaIngresodateTimePicker.Location = new System.Drawing.Point(142, 101);
+            this.FechaIngresodateTimePicker.Location = new System.Drawing.Point(125, 69);
             this.FechaIngresodateTimePicker.Name = "FechaIngresodateTimePicker";
-            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(120, 22);
+            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(99, 22);
             this.FechaIngresodateTimePicker.TabIndex = 10;
             // 
             // MyErrorProvider
@@ -149,11 +158,14 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(300, 26);
+            this.Buscarbutton.Image = global::Parcial2_Adriel.Properties.Resources.find;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(223, 16);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(87, 51);
+            this.Buscarbutton.Size = new System.Drawing.Size(87, 36);
             this.Buscarbutton.TabIndex = 11;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -161,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 340);
+            this.ClientSize = new System.Drawing.Size(385, 291);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.FechaIngresodateTimePicker);
             this.Controls.Add(this.NombrestextBox);
