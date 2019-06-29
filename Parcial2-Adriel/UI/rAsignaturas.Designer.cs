@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 63);
+            this.label1.Location = new System.Drawing.Point(17, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // Descripcion
             // 
             this.Descripcion.AutoSize = true;
-            this.Descripcion.Location = new System.Drawing.Point(66, 114);
+            this.Descripcion.Location = new System.Drawing.Point(17, 85);
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Size = new System.Drawing.Size(82, 17);
             this.Descripcion.TabIndex = 1;
@@ -66,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 159);
+            this.label3.Location = new System.Drawing.Point(17, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 2;
@@ -74,53 +74,62 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(69, 252);
+            this.Nuevobutton.Image = global::Parcial2_Adriel.Properties.Resources.add;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(41, 186);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 42);
+            this.Nuevobutton.Size = new System.Drawing.Size(81, 54);
             this.Nuevobutton.TabIndex = 3;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(183, 252);
+            this.Guardarbutton.Image = global::Parcial2_Adriel.Properties.Resources.save_as;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(151, 187);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(81, 41);
+            this.Guardarbutton.Size = new System.Drawing.Size(81, 53);
             this.Guardarbutton.TabIndex = 4;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(310, 252);
+            this.Eliminarbutton.Image = global::Parcial2_Adriel.Properties.Resources.delete;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(274, 187);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 42);
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 53);
             this.Eliminarbutton.TabIndex = 5;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // AsignaturaIdnumericUpDown
             // 
-            this.AsignaturaIdnumericUpDown.Location = new System.Drawing.Point(169, 63);
+            this.AsignaturaIdnumericUpDown.Location = new System.Drawing.Point(126, 38);
             this.AsignaturaIdnumericUpDown.Name = "AsignaturaIdnumericUpDown";
-            this.AsignaturaIdnumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.AsignaturaIdnumericUpDown.Size = new System.Drawing.Size(63, 22);
             this.AsignaturaIdnumericUpDown.TabIndex = 6;
             // 
             // CreditosnumericUpDown
             // 
-            this.CreditosnumericUpDown.Location = new System.Drawing.Point(169, 159);
+            this.CreditosnumericUpDown.Location = new System.Drawing.Point(126, 129);
             this.CreditosnumericUpDown.Name = "CreditosnumericUpDown";
-            this.CreditosnumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.CreditosnumericUpDown.Size = new System.Drawing.Size(187, 22);
             this.CreditosnumericUpDown.TabIndex = 7;
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(169, 114);
+            this.DescripciontextBox.Location = new System.Drawing.Point(126, 82);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(120, 22);
+            this.DescripciontextBox.Size = new System.Drawing.Size(187, 22);
             this.DescripciontextBox.TabIndex = 8;
             // 
             // MyErrorProvider
@@ -129,11 +138,14 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(309, 32);
+            this.Buscarbutton.Image = global::Parcial2_Adriel.Properties.Resources.find;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(219, 30);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.Size = new System.Drawing.Size(94, 37);
             this.Buscarbutton.TabIndex = 9;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -141,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 341);
+            this.ClientSize = new System.Drawing.Size(373, 267);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.CreditosnumericUpDown);
