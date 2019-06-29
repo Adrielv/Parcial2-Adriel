@@ -15,13 +15,30 @@ namespace Parcial2_Adriel.Entidades
 
         public DateTime Fecha { get; set; }
 
-        public int Monto { get; set; }
+        public decimal Monto { get; set; }
+
+        public decimal MontoTotal { get; set; }
+
+        public virtual List<InscripcionDetalle> Asignaturas { get; set; }
 
         public Inscripcion()
         {
             InscripcionId = 0;
             Fecha = DateTime.Now;
             Monto = 0;
+            MontoTotal = 0;
+            Asignaturas = new List<InscripcionDetalle>();
+        }
+        public void CalcularMonto()
+        {
+            decimal total = 0;
+
+            foreach (var item in Asignaturas)
+            {
+                total += item.SubTotal;
+            }
+
+            MontoTotal = total;
         }
     }
 }

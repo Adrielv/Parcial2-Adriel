@@ -15,7 +15,7 @@ namespace Parcial2_Adriel.Entidades
         public DateTime FechaIngresos { get; set; }
         public string Nombres { get; set; }
 
-        public int Balance { get; set; }
+        public decimal Balance { get; set; }
 
         public Estudiantes()
         {
