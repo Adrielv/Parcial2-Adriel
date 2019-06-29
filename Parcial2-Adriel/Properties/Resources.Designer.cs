@@ -83,6 +83,16 @@ namespace Parcial2_Adriel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coleccion_logotipos_flat_universidad_23_2147915908 {
+            get {
+                object obj = ResourceManager.GetObject("coleccion-logotipos-flat-universidad_23-2147915908", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);

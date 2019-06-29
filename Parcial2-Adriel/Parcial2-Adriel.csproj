@@ -60,14 +60,32 @@
     <Compile Include="Entidades\Estudiantes.cs" />
     <Compile Include="Entidades\Inscripcion.cs" />
     <Compile Include="Entidades\InscripcionDetalle.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consulta\cAsignaturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cAsignaturas.Designer.cs">
+      <DependentUpon>cAsignaturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\cEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cEstudiantes.Designer.cs">
+      <DependentUpon>cEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\cInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cInscripcion.Designer.cs">
+      <DependentUpon>cInscripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\rIncripcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +104,9 @@
     <Compile Include="UI\rEstudiantes.Designer.cs">
       <DependentUpon>rEstudiantes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +117,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consulta\cAsignaturas.resx">
+      <DependentUpon>cAsignaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\cEstudiantes.resx">
+      <DependentUpon>cEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\cInscripcion.resx">
+      <DependentUpon>cInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\rIncripcion.resx">
       <DependentUpon>rIncripcion.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save_as.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coleccion-logotipos-flat-universidad_23-2147915908.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

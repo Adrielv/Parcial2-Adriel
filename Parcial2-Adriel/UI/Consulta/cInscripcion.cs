@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Parcial2_Adriel
+namespace Parcial2_Adriel.UI.Consulta
 {
-    public partial class Form1 : Form
+    public partial class cInscripcion : Form
     {
-        public Form1()
+        public cInscripcion()
         {
             InitializeComponent();
         }
