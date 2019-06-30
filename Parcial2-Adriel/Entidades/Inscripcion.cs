@@ -19,6 +19,8 @@ namespace Parcial2_Adriel.Entidades
 
         public decimal MontoTotal { get; set; }
 
+        public int EstudianteId { get; set; }
+
         public virtual List<InscripcionDetalle> Asignaturas { get; set; }
 
         public Inscripcion()
@@ -27,6 +29,7 @@ namespace Parcial2_Adriel.Entidades
             Fecha = DateTime.Now;
             Monto = 0;
             MontoTotal = 0;
+            EstudianteId = 0;
             Asignaturas = new List<InscripcionDetalle>();
         }
         public void CalcularMonto()

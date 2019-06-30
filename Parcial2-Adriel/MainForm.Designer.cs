@@ -111,14 +111,16 @@
             // estudiantesToolStripMenuItem
             // 
             this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
-            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.estudiantesToolStripMenuItem.Text = "Estudiantes";
+            this.estudiantesToolStripMenuItem.Click += new System.EventHandler(this.EstudiantesToolStripMenuItem_Click);
             // 
             // inscripcionesToolStripMenuItem1
             // 
             this.inscripcionesToolStripMenuItem1.Name = "inscripcionesToolStripMenuItem1";
-            this.inscripcionesToolStripMenuItem1.Size = new System.Drawing.Size(169, 26);
+            this.inscripcionesToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.inscripcionesToolStripMenuItem1.Text = "Inscripciones";
+            this.inscripcionesToolStripMenuItem1.Click += new System.EventHandler(this.InscripcionesToolStripMenuItem1_Click);
             // 
             // MainForm
             // 

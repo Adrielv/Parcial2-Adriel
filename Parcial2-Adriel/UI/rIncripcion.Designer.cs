@@ -43,14 +43,14 @@
             this.MontoTotaltextBox = new System.Windows.Forms.TextBox();
             this.AsignaturacomboBox = new System.Windows.Forms.ComboBox();
             this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.detalleDataGridView = new System.Windows.Forms.DataGridView();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MontoCreditosnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoCreditosnumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Buscarbutton
             // 
@@ -87,6 +88,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // EliminarLineabutton
             // 
@@ -99,6 +101,7 @@
             this.EliminarLineabutton.Text = "Eliminar linea";
             this.EliminarLineabutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarLineabutton.UseVisualStyleBackColor = true;
+            this.EliminarLineabutton.Click += new System.EventHandler(this.EliminarLineabutton_Click);
             // 
             // Agregarbutton
             // 
@@ -108,6 +111,7 @@
             this.Agregarbutton.Size = new System.Drawing.Size(40, 32);
             this.Agregarbutton.TabIndex = 6;
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // label2
             // 
@@ -186,18 +190,18 @@
             this.EstudiantecomboBox.Size = new System.Drawing.Size(125, 24);
             this.EstudiantecomboBox.TabIndex = 17;
             // 
-            // dataGridView
+            // detalleDataGridView
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(45, 296);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(303, 150);
-            this.dataGridView.TabIndex = 18;
+            this.detalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detalleDataGridView.Location = new System.Drawing.Point(45, 296);
+            this.detalleDataGridView.Name = "detalleDataGridView";
+            this.detalleDataGridView.RowTemplate.Height = 24;
+            this.detalleDataGridView.Size = new System.Drawing.Size(303, 150);
+            this.detalleDataGridView.TabIndex = 18;
             // 
-            // errorProvider1
+            // MyerrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // IdnumericUpDown
             // 
@@ -224,6 +228,7 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -236,15 +241,16 @@
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
-            // Incripcion
+            // rIncripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 571);
             this.Controls.Add(this.MontoCreditosnumericUpDown);
             this.Controls.Add(this.IdnumericUpDown);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.detalleDataGridView);
             this.Controls.Add(this.EstudiantecomboBox);
             this.Controls.Add(this.AsignaturacomboBox);
             this.Controls.Add(this.MontoTotaltextBox);
@@ -261,10 +267,10 @@
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.label1);
-            this.Name = "Incripcion";
+            this.Name = "rIncripcion";
             this.Text = "Incripcion";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoCreditosnumericUpDown)).EndInit();
             this.ResumeLayout(false);
@@ -290,8 +296,8 @@
         private System.Windows.Forms.TextBox MontoTotaltextBox;
         private System.Windows.Forms.ComboBox AsignaturacomboBox;
         private System.Windows.Forms.ComboBox EstudiantecomboBox;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView detalleDataGridView;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.NumericUpDown MontoCreditosnumericUpDown;
         private System.Windows.Forms.NumericUpDown IdnumericUpDown;
     }

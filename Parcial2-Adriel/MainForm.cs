@@ -43,5 +43,17 @@ namespace Parcial2_Adriel
             ca.Show();
 
         }
+
+        private void EstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cEstudiantes ce = new cEstudiantes();
+            ce.Show();
+        }
+
+        private void InscripcionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cInscripcion ci = new cInscripcion();
+            ci.Show();
+        }
     }
 }
