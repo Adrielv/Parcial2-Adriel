@@ -15,13 +15,14 @@ namespace Parcial2_Adriel.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>(new DAL.Contexto());
-
+            RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>();
+           
 
             try
             {
+                
                 var estudiante = dbEst.Buscar(inscripcion.EstudianteId);
-                var anterior = new RepositorioBase<Inscripcion>(new DAL.Contexto()).Buscar(inscripcion.InscripcionId);
+                var anterior = new RepositorioBase<Inscripcion>().Buscar(inscripcion.InscripcionId);
                 estudiante.Balance -= anterior.MontoTotal;
 
                 foreach (var item in anterior.Asignaturas)
@@ -71,7 +72,7 @@ namespace Parcial2_Adriel.BLL
             Contexto db = new Contexto();
             try
             {
-                RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+                RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>();
 
                 if (db.inscripcions.Add(inscripcion) != null)
                 {
@@ -96,7 +97,7 @@ namespace Parcial2_Adriel.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>();
             try
             {
                 var Inscripcion = db.inscripcions.Find(id);

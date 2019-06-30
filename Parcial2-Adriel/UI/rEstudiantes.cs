@@ -73,7 +73,7 @@ namespace Parcial2_Adriel.UI
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>();
             Estudiantes estudiantes = rb.Buscar((int)IdnumericUpDown.Value);
             return (estudiantes != null);
 
@@ -81,7 +81,7 @@ namespace Parcial2_Adriel.UI
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>();
             Estudiantes estudiantes;
             bool paso = false;
 
@@ -113,7 +113,7 @@ namespace Parcial2_Adriel.UI
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>();
             MyErrorProvider.Clear();
 
             int id;
@@ -130,7 +130,7 @@ namespace Parcial2_Adriel.UI
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
             int id;
             Estudiantes estudiante = new Estudiantes();
 

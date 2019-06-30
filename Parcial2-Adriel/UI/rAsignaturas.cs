@@ -72,7 +72,7 @@ namespace Parcial2_Adriel.UI
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>();
             Asignaturas asignaturas = rp.Buscar((int)AsignaturaIdnumericUpDown.Value);
             return (asignaturas != null);
 
@@ -85,7 +85,7 @@ namespace Parcial2_Adriel.UI
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>();
             Asignaturas asignaturas;
             bool paso = false;
 
@@ -118,7 +118,7 @@ namespace Parcial2_Adriel.UI
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
-            RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>();
             int id;
             int.TryParse(AsignaturaIdnumericUpDown.Text, out id);
 
@@ -133,7 +133,7 @@ namespace Parcial2_Adriel.UI
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             int id;
             Asignaturas asignaturas = new Asignaturas();
 

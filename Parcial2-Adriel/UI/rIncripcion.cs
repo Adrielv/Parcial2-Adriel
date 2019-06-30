@@ -41,7 +41,15 @@ namespace Parcial2_Adriel.UI
         {
             Inscripcion inscripcion = new Inscripcion();
             inscripcion.Asignaturas = this.Detalle;
-            inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
+            if (IdnumericUpDown.Value == 0)
+            {
+                inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
+            }
+            else
+            {
+                inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.Text);
+
+            }
             inscripcion.InscripcionId = Convert.ToInt32(IdnumericUpDown.Value);
             inscripcion.Monto = MontoCreditosnumericUpDown.Value;
             inscripcion.CalcularMonto();
@@ -102,14 +110,14 @@ namespace Parcial2_Adriel.UI
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
             Inscripcion inscripcion = db.Buscar((int)IdnumericUpDown.Value);
             return (inscripcion != null);
         }
 
         private void LlenarComboBox()
         {
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             var listado2 = new List<Asignaturas>();
             listado2 = db.GetList(p => true);
             AsignaturacomboBox.DataSource = listado2;
@@ -120,7 +128,7 @@ namespace Parcial2_Adriel.UI
 
         private void LLenarComboBox2()
         {
-            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
             var listado = new List<Estudiantes>();
             listado = db.GetList(l => true);
             EstudiantecomboBox.DataSource = listado;
@@ -168,7 +176,7 @@ namespace Parcial2_Adriel.UI
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
             MyerrorProvider.Clear();
             int id;
             int.TryParse(IdnumericUpDown.Text, out id);
@@ -194,7 +202,7 @@ namespace Parcial2_Adriel.UI
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             Asignaturas asignatura = db.Buscar((int)AsignaturacomboBox.SelectedValue);
             if (detalleDataGridView.DataSource != null)
                 this.Detalle = (List<InscripcionDetalle>)detalleDataGridView.DataSource;
@@ -214,7 +222,7 @@ namespace Parcial2_Adriel.UI
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
             int id;
             Inscripcion inscripcion = new Inscripcion();
 

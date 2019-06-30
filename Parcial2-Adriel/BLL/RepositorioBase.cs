@@ -16,9 +16,9 @@ namespace Parcial2_Adriel.BLL
     {
         internal Contexto _contexto;
 
-        public RepositorioBase(Contexto contexto)
+        public RepositorioBase()
         {
-            _contexto = contexto;
+            _contexto = new Contexto();
         }
 
         public virtual bool Guardar(T entity)

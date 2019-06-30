@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +57,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // label2
             // 
@@ -82,21 +83,21 @@
             this.FiltrocomboBox.Size = new System.Drawing.Size(251, 24);
             this.FiltrocomboBox.TabIndex = 4;
             // 
-            // dataGridView
+            // ConsultadataGridView
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(28, 64);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(748, 356);
-            this.dataGridView.TabIndex = 5;
+            this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultadataGridView.Location = new System.Drawing.Point(28, 64);
+            this.ConsultadataGridView.Name = "ConsultadataGridView";
+            this.ConsultadataGridView.RowTemplate.Height = 24;
+            this.ConsultadataGridView.Size = new System.Drawing.Size(748, 356);
+            this.ConsultadataGridView.TabIndex = 5;
             // 
             // cAsignaturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.FiltrocomboBox);
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.label2);
@@ -104,7 +105,7 @@
             this.Controls.Add(this.label1);
             this.Name = "cAsignaturas";
             this.Text = "cAsignaturas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +118,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.ComboBox FiltrocomboBox;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView ConsultadataGridView;
     }
 }
