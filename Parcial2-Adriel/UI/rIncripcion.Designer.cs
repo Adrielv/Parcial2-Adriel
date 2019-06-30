@@ -173,6 +173,7 @@
             // 
             this.MontoTotaltextBox.Location = new System.Drawing.Point(254, 465);
             this.MontoTotaltextBox.Name = "MontoTotaltextBox";
+            this.MontoTotaltextBox.ReadOnly = true;
             this.MontoTotaltextBox.Size = new System.Drawing.Size(125, 22);
             this.MontoTotaltextBox.TabIndex = 15;
             // 
@@ -214,7 +215,13 @@
             // 
             // MontoCreditosnumericUpDown
             // 
+            this.MontoCreditosnumericUpDown.DecimalPlaces = 2;
             this.MontoCreditosnumericUpDown.Location = new System.Drawing.Point(148, 157);
+            this.MontoCreditosnumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.MontoCreditosnumericUpDown.Name = "MontoCreditosnumericUpDown";
             this.MontoCreditosnumericUpDown.Size = new System.Drawing.Size(125, 22);
             this.MontoCreditosnumericUpDown.TabIndex = 20;

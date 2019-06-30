@@ -113,20 +113,33 @@ namespace Parcial2_Adriel.UI
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
+
             RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>();
             MyErrorProvider.Clear();
 
             int id;
             int.TryParse(IdnumericUpDown.Text, out id);
 
+          
+
             Limpiar();
 
-            if (rb.Eliminar(id))
-                MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (IdnumericUpDown.Value > 0)
+            {
+
+                if (rb.Eliminar(id))
+                    MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MyErrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una persona que no existe");
+            }
             else
-                MyErrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una persona que no existe");
+            {
+                MyErrorProvider.SetError(IdnumericUpDown, "Selecione a quien quiere eliminar");
+                IdnumericUpDown.Focus();
+            }
 
         }
+       
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {

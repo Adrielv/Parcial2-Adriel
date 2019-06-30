@@ -124,11 +124,18 @@ namespace Parcial2_Adriel.UI
 
             Limpiar();
 
-            if (rp.Eliminar(id))
-                MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (AsignaturaIdnumericUpDown.Value > 0)
+            {
+                if (rp.Eliminar(id))
+                    MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MyErrorProvider.SetError(AsignaturaIdnumericUpDown, "No se puede eliminar que no existe");
+            }
             else
-                MyErrorProvider.SetError(AsignaturaIdnumericUpDown, "No se puede eliminar que no existe");
-
+            {
+                MyErrorProvider.SetError(AsignaturaIdnumericUpDown, "Selecione a quien quiere eliminar");
+                AsignaturaIdnumericUpDown.Focus();
+            }
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)

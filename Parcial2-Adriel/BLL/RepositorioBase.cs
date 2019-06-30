@@ -68,10 +68,8 @@ namespace Parcial2_Adriel.BLL
                 T entity = _contexto.Set<T>().Find(id);
                 _contexto.Set<T>().Remove(entity);
 
-                if (_contexto.SaveChanges() > 0)
-                {
-                    paso = true;
-                }
+                paso = _contexto.SaveChanges() > 0;
+               
                 _contexto.Dispose();
             }
             catch (Exception)

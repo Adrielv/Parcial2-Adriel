@@ -181,13 +181,22 @@ namespace Parcial2_Adriel.UI
             int id;
             int.TryParse(IdnumericUpDown.Text, out id);
             Limpiar();
-            if (InscripcionBLL.Eliminar(id))
+
+            if (IdnumericUpDown.Value > 0)
             {
-                MessageBox.Show("Eliminado");
+                        if (InscripcionBLL.Eliminar(id))
+                    {
+                        MessageBox.Show("Eliminado");
+                    }
+                    else
+                    {
+                        MyerrorProvider.SetError(IdnumericUpDown, "No se puede elimina, porque no existe");
+                    }
             }
             else
             {
-                MyerrorProvider.SetError(IdnumericUpDown, "No se puede elimina, porque no existe");
+                MyerrorProvider.SetError(IdnumericUpDown, "Selecione a quien quiere eliminar");
+                IdnumericUpDown.Focus();
             }
         }
 
