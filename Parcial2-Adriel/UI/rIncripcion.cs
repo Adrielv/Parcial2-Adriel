@@ -85,7 +85,7 @@ namespace Parcial2_Adriel.UI
 
             if (MontoCreditosnumericUpDown.Value == 0)
             {
-                MyerrorProvider.SetError(MontoCreditosnumericUpDown, "El Tipo Usuario no puede estar vacio");
+                MyerrorProvider.SetError(MontoCreditosnumericUpDown, "El Monto de los creditos no puede estar ser 0");
                 MontoCreditosnumericUpDown.Focus();
                 paso = false;
 
@@ -124,7 +124,7 @@ namespace Parcial2_Adriel.UI
             var listado = new List<Estudiantes>();
             listado = db.GetList(l => true);
             EstudiantecomboBox.DataSource = listado;
-            EstudiantecomboBox.DisplayMember = "Nombre";
+            EstudiantecomboBox.DisplayMember = "Nombres";
             EstudiantecomboBox.ValueMember = "EstudianteId";
         }
 

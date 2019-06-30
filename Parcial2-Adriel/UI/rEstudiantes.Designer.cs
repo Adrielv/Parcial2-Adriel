@@ -87,9 +87,9 @@
             // 
             this.Nuevobutton.Image = global::Parcial2_Adriel.Properties.Resources.add;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 212);
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 197);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(103, 52);
+            this.Nuevobutton.Size = new System.Drawing.Size(103, 67);
             this.Nuevobutton.TabIndex = 4;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -100,9 +100,9 @@
             // 
             this.Guardarbutton.Image = global::Parcial2_Adriel.Properties.Resources.save_as;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(142, 212);
+            this.Guardarbutton.Location = new System.Drawing.Point(142, 197);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(103, 53);
+            this.Guardarbutton.Size = new System.Drawing.Size(103, 68);
             this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -113,9 +113,9 @@
             // 
             this.Eliminarbutton.Image = global::Parcial2_Adriel.Properties.Resources.delete;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(262, 212);
+            this.Eliminarbutton.Location = new System.Drawing.Point(262, 197);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(103, 53);
+            this.Eliminarbutton.Size = new System.Drawing.Size(103, 68);
             this.Eliminarbutton.TabIndex = 6;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -149,7 +149,7 @@
             this.FechaIngresodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaIngresodateTimePicker.Location = new System.Drawing.Point(125, 69);
             this.FechaIngresodateTimePicker.Name = "FechaIngresodateTimePicker";
-            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(99, 22);
+            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(108, 22);
             this.FechaIngresodateTimePicker.TabIndex = 10;
             // 
             // MyErrorProvider

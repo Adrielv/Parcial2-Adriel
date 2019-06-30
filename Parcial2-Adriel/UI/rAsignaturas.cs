@@ -24,7 +24,7 @@ namespace Parcial2_Adriel.UI
         private void Limpiar()
         {
             CreditosnumericUpDown.Value = 0;
-            Descripcion.Text = string.Empty;
+            DescripciontextBox.Text = string.Empty;
             AsignaturaIdnumericUpDown.Value = 0;
           
             MyErrorProvider.Clear();
@@ -52,10 +52,10 @@ namespace Parcial2_Adriel.UI
             bool paso = true;
             MyErrorProvider.Clear();
 
-            if (Descripcion.Text == string.Empty)
+            if (DescripciontextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(DescripciontextBox, "El campo Descripcion no puede estar vacio");
-                Descripcion.Focus();
+                DescripciontextBox.Focus();
                 paso = false;
             }
 
