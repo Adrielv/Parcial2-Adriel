@@ -17,6 +17,9 @@ namespace Parcial2_Adriel.UI.Consulta
             InitializeComponent();
         }
 
-        
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

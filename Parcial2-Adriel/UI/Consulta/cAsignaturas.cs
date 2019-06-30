@@ -22,44 +22,64 @@ namespace Parcial2_Adriel.UI.Consulta
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             var listado = new List<Asignaturas>();
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
+            RepositorioBase<Asignaturas> rb = new RepositorioBase<Asignaturas>();
 
-            if (CriteriotextBox.Text.Trim().Length > 0)
+
+            try
             {
-
-                try
+                if (CriteriotextBox.Text.Trim().Length > 0)
                 {
                     switch (FiltrocomboBox.Text)
                     {
-                        case "Todos": 
-                            listado = db.GetList(A => true);
+                        case "Todos":
+                            listado = rb.GetList(A => true);
                             break;
 
                         case "Id":
                             int id = Convert.ToInt32(CriteriotextBox.Text);
-                            listado = db.GetList(p => p.AsignaturaId == id);
+                            listado = rb.GetList(p => p.AsignaturaId == id);
                             break;
 
                         case "Descripcion":
-                            listado = db.GetList(A => A.Descripcion.Contains(CriteriotextBox.Text));
+                            listado = rb.GetList(A => A.Descripcion.Contains(CriteriotextBox.Text));
                             break;
-                     /*   case "Creditos":
-                            
-                            listado = db.GetList(p => p.Creditos);
+
+                        case "Creditos":
+                            decimal c = decimal.Parse(CriteriotextBox.Text);
+                            listado = rb.GetList(p => p.Creditos == c);
                             break;
-                            */
+
+
                     }
                 }
-                catch (Exception)
+                else
                 {
-
+                    MyErrorProvider.Clear();
+                    if (FiltrocomboBox.Text == string.Empty)
+                    {
+                        MyErrorProvider.SetError(FiltrocomboBox, "El campo Filtro no puede estar vacio");
+                        FiltrocomboBox.Focus();
+                      
+                    }
+                    else
+                        if ((string)FiltrocomboBox.Text != "Todos")
+                        {
+                            if (CriteriotextBox.Text == string.Empty)
+                            {
+                            MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
+                             CriteriotextBox.Focus();                         
+                            }
+                         }
+                    else
+                    {
+                        listado = rb.GetList(p => true);
+                    }
                 }
-
             }
-            else
+            catch (Exception)
             {
-                listado = db.GetList(p => true);
-            }
+
+            }      
 
             ConsultadataGridView.DataSource = null;
             ConsultadataGridView.DataSource = listado;
