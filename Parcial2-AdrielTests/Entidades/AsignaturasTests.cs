@@ -51,6 +51,13 @@ namespace Parcial2_Adriel.Entidades.Tests
             lista = repositorio.GetList(e => true);
             Assert.IsNotNull(lista);
         }
-
+        [TestMethod()]
+        public void AsignaturaEliminarTest()
+        {
+            RepositorioBase<Asignaturas> repositoriobase = new RepositorioBase<Asignaturas>();
+            bool paso = false;
+            paso = repositoriobase.Eliminar(1);
+            Assert.AreEqual(true, paso);
+        }
     }
 }
