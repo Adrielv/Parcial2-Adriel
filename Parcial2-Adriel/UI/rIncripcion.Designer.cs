@@ -49,10 +49,12 @@
             this.MontoCreditosnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoCreditosnumericUpDown)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -94,9 +96,9 @@
             // 
             this.EliminarLineabutton.Image = global::Parcial2_Adriel.Properties.Resources.cancel;
             this.EliminarLineabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarLineabutton.Location = new System.Drawing.Point(45, 464);
+            this.EliminarLineabutton.Location = new System.Drawing.Point(16, 452);
             this.EliminarLineabutton.Name = "EliminarLineabutton";
-            this.EliminarLineabutton.Size = new System.Drawing.Size(132, 31);
+            this.EliminarLineabutton.Size = new System.Drawing.Size(143, 43);
             this.EliminarLineabutton.TabIndex = 5;
             this.EliminarLineabutton.Text = "Eliminar linea";
             this.EliminarLineabutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,7 +108,7 @@
             // Agregarbutton
             // 
             this.Agregarbutton.Image = global::Parcial2_Adriel.Properties.Resources.add;
-            this.Agregarbutton.Location = new System.Drawing.Point(293, 256);
+            this.Agregarbutton.Location = new System.Drawing.Point(296, 24);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(40, 32);
             this.Agregarbutton.TabIndex = 6;
@@ -143,16 +145,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 198);
+            this.label5.Location = new System.Drawing.Point(165, 465);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 17);
+            this.label5.Size = new System.Drawing.Size(87, 17);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Monto Total";
+            this.label5.Text = "Monto Total:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 259);
+            this.label6.Location = new System.Drawing.Point(39, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 11;
@@ -169,7 +171,7 @@
             // 
             // MontoTotaltextBox
             // 
-            this.MontoTotaltextBox.Location = new System.Drawing.Point(148, 198);
+            this.MontoTotaltextBox.Location = new System.Drawing.Point(254, 465);
             this.MontoTotaltextBox.Name = "MontoTotaltextBox";
             this.MontoTotaltextBox.Size = new System.Drawing.Size(125, 22);
             this.MontoTotaltextBox.TabIndex = 15;
@@ -177,7 +179,7 @@
             // AsignaturacomboBox
             // 
             this.AsignaturacomboBox.FormattingEnabled = true;
-            this.AsignaturacomboBox.Location = new System.Drawing.Point(148, 256);
+            this.AsignaturacomboBox.Location = new System.Drawing.Point(132, 29);
             this.AsignaturacomboBox.Name = "AsignaturacomboBox";
             this.AsignaturacomboBox.Size = new System.Drawing.Size(121, 24);
             this.AsignaturacomboBox.TabIndex = 16;
@@ -193,10 +195,10 @@
             // detalleDataGridView
             // 
             this.detalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.detalleDataGridView.Location = new System.Drawing.Point(45, 296);
+            this.detalleDataGridView.Location = new System.Drawing.Point(6, 62);
             this.detalleDataGridView.Name = "detalleDataGridView";
             this.detalleDataGridView.RowTemplate.Height = 24;
-            this.detalleDataGridView.Size = new System.Drawing.Size(303, 150);
+            this.detalleDataGridView.Size = new System.Drawing.Size(347, 175);
             this.detalleDataGridView.TabIndex = 18;
             // 
             // MyerrorProvider
@@ -243,24 +245,34 @@
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.AsignaturacomboBox);
+            this.groupBox1.Controls.Add(this.detalleDataGridView);
+            this.groupBox1.Controls.Add(this.Agregarbutton);
+            this.groupBox1.Location = new System.Drawing.Point(12, 203);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(374, 243);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos";
+            // 
             // rIncripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 571);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.MontoCreditosnumericUpDown);
             this.Controls.Add(this.IdnumericUpDown);
-            this.Controls.Add(this.detalleDataGridView);
             this.Controls.Add(this.EstudiantecomboBox);
-            this.Controls.Add(this.AsignaturacomboBox);
             this.Controls.Add(this.MontoTotaltextBox);
             this.Controls.Add(this.FechaInscripciondateTimePicker);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Agregarbutton);
             this.Controls.Add(this.EliminarLineabutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -273,6 +285,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoCreditosnumericUpDown)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +314,6 @@
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.NumericUpDown MontoCreditosnumericUpDown;
         private System.Windows.Forms.NumericUpDown IdnumericUpDown;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
