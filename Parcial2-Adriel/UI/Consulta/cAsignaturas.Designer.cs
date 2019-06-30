@@ -78,6 +78,11 @@
             // FiltrocomboBox
             // 
             this.FiltrocomboBox.FormattingEnabled = true;
+            this.FiltrocomboBox.Items.AddRange(new object[] {
+            "Todos",
+            "Descripcion",
+            "Id",
+            "Creditos"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(74, 29);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(251, 24);
@@ -85,6 +90,7 @@
             // 
             // ConsultadataGridView
             // 
+            this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(28, 64);
             this.ConsultadataGridView.Name = "ConsultadataGridView";

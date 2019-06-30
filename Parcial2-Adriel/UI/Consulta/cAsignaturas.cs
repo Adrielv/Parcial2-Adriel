@@ -29,21 +29,25 @@ namespace Parcial2_Adriel.UI.Consulta
 
                 try
                 {
-                    switch (FiltrocomboBox.SelectedIndex)
+                    switch (FiltrocomboBox.Text)
                     {
-                        case 0://Todo
+                        case "Todos": 
                             listado = db.GetList(A => true);
                             break;
 
-                        case 1://ID
+                        case "Id":
                             int id = Convert.ToInt32(CriteriotextBox.Text);
                             listado = db.GetList(p => p.AsignaturaId == id);
                             break;
 
-                        case 2://Descripcion
+                        case "Descripcion":
                             listado = db.GetList(A => A.Descripcion.Contains(CriteriotextBox.Text));
                             break;
-
+                     /*   case "Creditos":
+                            
+                            listado = db.GetList(p => p.Creditos);
+                            break;
+                            */
                     }
                 }
                 catch (Exception)
