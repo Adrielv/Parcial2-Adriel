@@ -115,19 +115,14 @@ namespace Parcial2_Adriel.UI
         {
 
             RepositorioBase<Estudiantes> rb = new RepositorioBase<Estudiantes>();
-            MyErrorProvider.Clear();
-
-            int id;
-            int.TryParse(IdnumericUpDown.Text, out id);
-
-          
-
+  
+         
             Limpiar();
 
             if (IdnumericUpDown.Value > 0)
             {
 
-                if (rb.Eliminar(id))
+                if (rb.Eliminar((int)IdnumericUpDown.Value))
                     MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MyErrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una persona que no existe");
@@ -154,7 +149,7 @@ namespace Parcial2_Adriel.UI
 
             if (estudiante != null)
             {
-                MessageBox.Show("Estudiante escontrado");
+                MessageBox.Show("Estudiante encontrado");
                 LlenarCampo(estudiante);
 
             }

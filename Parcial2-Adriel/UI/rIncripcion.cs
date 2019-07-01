@@ -177,14 +177,12 @@ namespace Parcial2_Adriel.UI
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
-            MyerrorProvider.Clear();
-            int id;
-            int.TryParse(IdnumericUpDown.Text, out id);
+            
             Limpiar();
 
             if (IdnumericUpDown.Value > 0)
             {
-                        if (InscripcionBLL.Eliminar(id))
+                        if (InscripcionBLL.Eliminar((int)IdnumericUpDown.Value))
                     {
                         MessageBox.Show("Eliminado");
                     }

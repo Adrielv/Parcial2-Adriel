@@ -34,13 +34,13 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.AsignaturaIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CreditosnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.AsignaturaIdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditosnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -102,12 +102,12 @@
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // AsignaturaIdnumericUpDown
+            // IdnumericUpDown
             // 
-            this.AsignaturaIdnumericUpDown.Location = new System.Drawing.Point(126, 38);
-            this.AsignaturaIdnumericUpDown.Name = "AsignaturaIdnumericUpDown";
-            this.AsignaturaIdnumericUpDown.Size = new System.Drawing.Size(63, 22);
-            this.AsignaturaIdnumericUpDown.TabIndex = 6;
+            this.IdnumericUpDown.Location = new System.Drawing.Point(126, 38);
+            this.IdnumericUpDown.Name = "IdnumericUpDown";
+            this.IdnumericUpDown.Size = new System.Drawing.Size(63, 22);
+            this.IdnumericUpDown.TabIndex = 6;
             // 
             // CreditosnumericUpDown
             // 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.CreditosnumericUpDown);
-            this.Controls.Add(this.AsignaturaIdnumericUpDown);
+            this.Controls.Add(this.IdnumericUpDown);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -166,7 +166,7 @@
             this.Controls.Add(this.label1);
             this.Name = "rAsignaturas";
             this.Text = "rAsignaturas";
-            ((System.ComponentModel.ISupportInitialize)(this.AsignaturaIdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditosnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.NumericUpDown AsignaturaIdnumericUpDown;
+        private System.Windows.Forms.NumericUpDown IdnumericUpDown;
         private System.Windows.Forms.NumericUpDown CreditosnumericUpDown;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;

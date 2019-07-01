@@ -179,6 +179,7 @@
             // 
             // AsignaturacomboBox
             // 
+            this.AsignaturacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AsignaturacomboBox.FormattingEnabled = true;
             this.AsignaturacomboBox.Location = new System.Drawing.Point(132, 29);
             this.AsignaturacomboBox.Name = "AsignaturacomboBox";
@@ -187,6 +188,7 @@
             // 
             // EstudiantecomboBox
             // 
+            this.EstudiantecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EstudiantecomboBox.FormattingEnabled = true;
             this.EstudiantecomboBox.Location = new System.Drawing.Point(148, 75);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
@@ -195,9 +197,12 @@
             // 
             // detalleDataGridView
             // 
+            this.detalleDataGridView.AllowUserToAddRows = false;
+            this.detalleDataGridView.AllowUserToDeleteRows = false;
             this.detalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detalleDataGridView.Location = new System.Drawing.Point(6, 62);
             this.detalleDataGridView.Name = "detalleDataGridView";
+            this.detalleDataGridView.ReadOnly = true;
             this.detalleDataGridView.RowTemplate.Height = 24;
             this.detalleDataGridView.Size = new System.Drawing.Size(347, 175);
             this.detalleDataGridView.TabIndex = 18;

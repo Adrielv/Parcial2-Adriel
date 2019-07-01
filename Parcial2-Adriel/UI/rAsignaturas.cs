@@ -25,7 +25,7 @@ namespace Parcial2_Adriel.UI
         {
             CreditosnumericUpDown.Value = 0;
             DescripciontextBox.Text = string.Empty;
-            AsignaturaIdnumericUpDown.Value = 0;
+            IdnumericUpDown.Value = 0;
           
             MyErrorProvider.Clear();
         }
@@ -33,7 +33,7 @@ namespace Parcial2_Adriel.UI
         private Asignaturas LlenaClase()
         {
             Asignaturas asignatura = new Asignaturas();
-            asignatura.AsignaturaId = Convert.ToInt32(AsignaturaIdnumericUpDown.Value);
+            asignatura.AsignaturaId = Convert.ToInt32(IdnumericUpDown.Value);
             asignatura.Descripcion = DescripciontextBox.Text;
             asignatura.Creditos = Convert.ToInt32(CreditosnumericUpDown.Value);
 
@@ -41,7 +41,7 @@ namespace Parcial2_Adriel.UI
         }
         private void LlenarCampo(Asignaturas asignatura)
         {
-            AsignaturaIdnumericUpDown.Value = asignatura.AsignaturaId;
+            IdnumericUpDown.Value = asignatura.AsignaturaId;
             DescripciontextBox.Text = asignatura.Descripcion;
             CreditosnumericUpDown.Value = asignatura.Creditos;
          
@@ -79,7 +79,7 @@ namespace Parcial2_Adriel.UI
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>();
-            Asignaturas asignaturas = rp.Buscar((int)AsignaturaIdnumericUpDown.Value);
+            Asignaturas asignaturas = rp.Buscar((int)IdnumericUpDown.Value);
             return (asignaturas != null);
 
         }
@@ -121,7 +121,7 @@ namespace Parcial2_Adriel.UI
             asignaturas = LlenaClase();
 
 
-            if (AsignaturaIdnumericUpDown.Value == 0)
+            if (IdnumericUpDown.Value == 0)
             {
                 paso = rp.Guardar(asignaturas);
             }
@@ -144,25 +144,22 @@ namespace Parcial2_Adriel.UI
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            MyErrorProvider.Clear();
             RepositorioBase<Asignaturas> rp = new RepositorioBase<Asignaturas>();
-            int id;
-            int.TryParse(AsignaturaIdnumericUpDown.Text, out id);
-
-            Limpiar();
-
-            if (AsignaturaIdnumericUpDown.Value > 0)
+      
+     
+            if (IdnumericUpDown.Value > 0)
             {
-                if (rp.Eliminar(id))
+                if (rp.Eliminar((int)IdnumericUpDown.Value))
                     MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MyErrorProvider.SetError(AsignaturaIdnumericUpDown, "No se puede eliminar que no existe");
+                    MyErrorProvider.SetError(IdnumericUpDown, "No se puede eliminar que no existe");
             }
             else
             {
-                MyErrorProvider.SetError(AsignaturaIdnumericUpDown, "Selecione a quien quiere eliminar");
-                AsignaturaIdnumericUpDown.Focus();
+                MyErrorProvider.SetError(IdnumericUpDown, "Selecione a que asignatura eliminar");
+                IdnumericUpDown.Focus();
             }
+            Limpiar();
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -171,7 +168,7 @@ namespace Parcial2_Adriel.UI
             int id;
             Asignaturas asignaturas = new Asignaturas();
 
-            int.TryParse(AsignaturaIdnumericUpDown.Text, out id);
+            int.TryParse(IdnumericUpDown.Text, out id);
             Limpiar();
 
             asignaturas = db.Buscar(id);
