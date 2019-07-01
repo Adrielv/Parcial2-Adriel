@@ -40,6 +40,7 @@
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             // 
             this.Buscarbutton.Image = global::Parcial2_Adriel.Properties.Resources.find;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(789, 29);
+            this.Buscarbutton.Location = new System.Drawing.Point(824, 24);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(95, 33);
             this.Buscarbutton.TabIndex = 0;
@@ -60,7 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(602, 32);
+            this.label1.Location = new System.Drawing.Point(655, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 1;
@@ -69,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 32);
+            this.label2.Location = new System.Drawing.Point(117, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 2;
@@ -78,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(403, 32);
+            this.label3.Location = new System.Drawing.Point(469, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 3;
@@ -87,7 +88,7 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(218, 32);
+            this.label.Location = new System.Drawing.Point(299, 29);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(45, 17);
             this.label.TabIndex = 4;
@@ -97,7 +98,7 @@
             // 
             this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(92, 32);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(191, 29);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(102, 22);
             this.DesdedateTimePicker.TabIndex = 5;
@@ -106,7 +107,7 @@
             // 
             this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(270, 32);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(360, 29);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(103, 22);
             this.HastadateTimePicker.TabIndex = 6;
@@ -119,14 +120,14 @@
             "ID",
             "Nombres",
             "Balance"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(462, 32);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(528, 27);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 24);
             this.FiltrocomboBox.TabIndex = 7;
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(661, 34);
+            this.CriteriotextBox.Location = new System.Drawing.Point(718, 27);
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(100, 22);
             this.CriteriotextBox.TabIndex = 8;
@@ -144,11 +145,22 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(12, 28);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(104, 21);
+            this.checkBox.TabIndex = 10;
+            this.checkBox.Text = "Filtro Fecha";
+            this.checkBox.UseVisualStyleBackColor = true;
+            // 
             // cEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 450);
+            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.FiltrocomboBox);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.DataGridView ConsultadataGridView;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }

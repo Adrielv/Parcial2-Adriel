@@ -211,6 +211,11 @@ namespace Parcial2_Adriel.UI
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
+          if(AsignaturacomboBox.Text == string.Empty)
+            {
+                MessageBox.Show("Agrege una asignatura");
+                return;
+            }
             RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             Asignaturas asignatura = db.Buscar((int)AsignaturacomboBox.SelectedValue);
             if (detalleDataGridView.DataSource != null)

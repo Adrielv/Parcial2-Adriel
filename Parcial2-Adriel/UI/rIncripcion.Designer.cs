@@ -72,7 +72,7 @@
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(270, 501);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(95, 58);
+            this.Eliminarbutton.Size = new System.Drawing.Size(95, 68);
             this.Eliminarbutton.TabIndex = 3;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -232,7 +232,7 @@
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(139, 501);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(95, 58);
+            this.Guardarbutton.Size = new System.Drawing.Size(95, 68);
             this.Guardarbutton.TabIndex = 2;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -245,7 +245,7 @@
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(12, 502);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(95, 57);
+            this.Nuevobutton.Size = new System.Drawing.Size(95, 67);
             this.Nuevobutton.TabIndex = 1;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 571);
+            this.ClientSize = new System.Drawing.Size(398, 581);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.MontoCreditosnumericUpDown);
             this.Controls.Add(this.IdnumericUpDown);
