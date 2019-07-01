@@ -62,9 +62,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.Size = new System.Drawing.Size(101, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id";
+            this.label1.Text = "InscripcionesId";
             // 
             // Eliminarbutton
             // 

@@ -65,8 +65,14 @@ namespace Parcial2_Adriel.UI
                 CreditosnumericUpDown.Focus();
                 paso = false;
             }
+            if (NoDuplicado(DescripciontextBox.Text))
+            {
+                MyErrorProvider.SetError(DescripciontextBox, "No se permite tener materias con el mismo nombre");
+                paso = false;
 
-           
+            }
+
+
             return paso;
         }
 
@@ -82,6 +88,27 @@ namespace Parcial2_Adriel.UI
         {
             Limpiar();
         }
+
+        public static bool NoDuplicado(string descripcion)
+        {
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
+            bool paso = false;
+            Contexto dbq = new Contexto();
+
+            try
+            {
+                if (dbq.Asignaturas.Any(p => p.Descripcion.Equals(descripcion)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {

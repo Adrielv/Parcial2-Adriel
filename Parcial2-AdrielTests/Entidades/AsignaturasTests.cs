@@ -30,7 +30,7 @@ namespace Parcial2_Adriel.Entidades.Tests
         {
             RepositorioBase<Asignaturas> repositorio = new RepositorioBase<Asignaturas>();
             bool paso = false;
-            Asignaturas a = repositorio.Buscar(1);
+            Asignaturas a = repositorio.Buscar(2);
             a.Creditos = 4;
             paso = repositorio.Modificar(a);
             Assert.AreEqual(true, paso);
@@ -39,7 +39,7 @@ namespace Parcial2_Adriel.Entidades.Tests
         public void AsignaturasBuscarTest()
         {
             RepositorioBase<Asignaturas> repositoriobase = new RepositorioBase<Asignaturas>();
-            Asignaturas a = repositoriobase.Buscar(1);
+            Asignaturas a = repositoriobase.Buscar(2);
             Assert.IsNotNull(a);
         }
 
@@ -56,7 +56,7 @@ namespace Parcial2_Adriel.Entidades.Tests
         {
             RepositorioBase<Asignaturas> repositoriobase = new RepositorioBase<Asignaturas>();
             bool paso = false;
-            paso = repositoriobase.Eliminar(1);
+            paso = repositoriobase.Eliminar(2);
             Assert.AreEqual(true, paso);
         }
     }
