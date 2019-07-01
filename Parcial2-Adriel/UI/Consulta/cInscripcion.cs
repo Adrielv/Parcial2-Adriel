@@ -68,14 +68,14 @@ namespace Parcial2_Adriel.UI.Consulta
 
                         }
                         else
-                            if ((string)FiltrocomboBox.Text != "Todos")
-                        {
-                            if (CriteriotextBox.Text == string.Empty)
-                            {
-                                MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
-                                CriteriotextBox.Focus();
-                            }
-                        }
+                            if (FiltrocomboBox.Text != "Todo")
+                                 {
+                                    if (CriteriotextBox.Text == string.Empty)
+                                    {
+                                        MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
+                                        CriteriotextBox.Focus();
+                                    }
+                                 }
 
                         else
                         {
@@ -136,7 +136,7 @@ namespace Parcial2_Adriel.UI.Consulta
                         }
                         else
                         {
-                            if ((string)FiltrocomboBox.Text != "Todos")
+                            if (FiltrocomboBox.Text != "Todo")
                             {
                                 if (CriteriotextBox.Text == string.Empty)
                                 {

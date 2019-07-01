@@ -132,6 +132,7 @@
             // BalancenumericUpDown
             // 
             this.BalancenumericUpDown.DecimalPlaces = 2;
+            this.BalancenumericUpDown.Enabled = false;
             this.BalancenumericUpDown.Location = new System.Drawing.Point(125, 150);
             this.BalancenumericUpDown.Maximum = new decimal(new int[] {
             1000000,

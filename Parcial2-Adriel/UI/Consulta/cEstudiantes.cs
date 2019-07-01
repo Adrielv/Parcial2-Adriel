@@ -27,7 +27,6 @@ namespace Parcial2_Adriel.UI.Consulta
             if (checkBox.Checked == true)
             {
 
-
                 try
                 {
                     if (CriteriotextBox.Text.Trim().Length > 0)
@@ -64,17 +63,20 @@ namespace Parcial2_Adriel.UI.Consulta
                         }
                         else
                             if ((string)FiltrocomboBox.Text != "Todos")
-                        {
-                            if (CriteriotextBox.Text == string.Empty)
                             {
-                                MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
-                                CriteriotextBox.Focus();
-                            }
-                        }
-                        else
+                                if (CriteriotextBox.Text == string.Empty)
+                                    {
+                                    MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
+                                    CriteriotextBox.Focus();
+                                  }
+                             }
+                         else
                         {
                             listado = rb.GetList(p => true);
-                        }
+                            listado = listado.Where(c => c.FechaIngresos.Date >= DesdedateTimePicker.Value.Date && c.FechaIngresos.Date <= HastadateTimePicker.Value.Date).ToList();
+                        
+
+                         }
 
                     }
                     ConsultadataGridView.DataSource = null;
@@ -129,7 +131,7 @@ namespace Parcial2_Adriel.UI.Consulta
                         }
                         else
                         {
-                            if ((string)FiltrocomboBox.Text != "Todos")
+                            if (FiltrocomboBox.Text.Equals("Todos"))
                             {
                                 if (CriteriotextBox.Text == string.Empty)
                                 {
