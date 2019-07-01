@@ -57,9 +57,8 @@ namespace Parcial2_Adriel.UI.Consulta
                                 break;
                         }
                         listado = listado.Where(c => c.Fecha.Date >= DesdedateTimePicker.Value.Date && c.Fecha.Date <= HastadateTimePicker.Value.Date).ToList();
-                    }
-                    else
-                    {
+                    
+                   
                         MyErrorProvider.Clear();
                         if (FiltrocomboBox.Text == string.Empty)
                         {
@@ -124,35 +123,33 @@ namespace Parcial2_Adriel.UI.Consulta
                             default:
                                 break;
                         }
+                    } else
+                    {
+                        listado = rb.GetList(p => true);
+                    }
+                    MyErrorProvider.Clear();
+                    if (FiltrocomboBox.Text == string.Empty)
+                    {
+                        MyErrorProvider.SetError(FiltrocomboBox, "El campo Filtro no puede estar vacio");
+                        FiltrocomboBox.Focus();
+
                     }
                     else
-                    {
-                        MyErrorProvider.Clear();
-                        if (FiltrocomboBox.Text == string.Empty)
+                        if (FiltrocomboBox.Text != "Todo")
+                         {
+                        if (CriteriotextBox.Text == string.Empty)
                         {
-                            MyErrorProvider.SetError(FiltrocomboBox, "El campo Filtro no puede estar vacio");
-                            FiltrocomboBox.Focus();
-
-                        }
-                        else
-                        {
-                            if (FiltrocomboBox.Text != "Todo")
-                            {
-                                if (CriteriotextBox.Text == string.Empty)
-                                {
-                                    MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
-                                    CriteriotextBox.Focus();
-                                }
-                            }
-                            {
-                                listado = rb.GetList(p => true);
-                            }
-
-                            ConsultadataGridView.DataSource = null;
-                            ConsultadataGridView.DataSource = listado;
-
+                            MyErrorProvider.SetError(CriteriotextBox, "El campo Criterio no puede estar vacio");
+                            CriteriotextBox.Focus();
                         }
                     }
+                    {
+                        listado = rb.GetList(p => true);
+                    }
+
+                    ConsultadataGridView.DataSource = null;
+                    ConsultadataGridView.DataSource = listado;              
+                    
                 }
                 catch (Exception)
                 {
